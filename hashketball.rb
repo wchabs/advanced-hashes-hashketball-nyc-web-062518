@@ -173,6 +173,7 @@ def team_colors(team_name)
     game_data.each do |data, details|
       puts details.class
       puts details
+      puts data
       if details == team_name
         #puts details
         #puts data
