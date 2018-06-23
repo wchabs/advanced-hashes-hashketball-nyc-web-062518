@@ -258,7 +258,7 @@ def big_shoe_rebounds
       end
     end
   end
-  puts temp_player_rebounds
+  temp_player_rebounds
 end
 
 big_shoe_rebounds
