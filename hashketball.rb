@@ -204,6 +204,8 @@ def player_numbers(team_name)
           puts details
           details.each do |players, numbers|
             team_jrsy_nums << numbers.values
+            puts players
+            puts numbers
             puts "loops"
           end
         end
