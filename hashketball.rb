@@ -199,6 +199,7 @@ def player_numbers(team_name)
   all_data.each do |location, game_data|
     if game_data.values.include?(team_name)
       game_data.each do |data, details|
+        puts data
         if data == :players
           details.each do |players, numbers|
             team_jrsy_nums << numbers
