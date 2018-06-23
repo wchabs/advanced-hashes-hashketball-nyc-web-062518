@@ -215,6 +215,30 @@ def player_numbers(team_name)
   return team_jrsy_nums
 end
 
+def player_stats(player_name)
+  temp_name_array = player_name.split" "
+  temp_name_formatted = temp_name_array.join"_"
+  
+  all_data = game_hash
+  
+  all_data.each do |location, game_data|
+    game_data.each do |data, details|
+      if data == :players
+        details.each do |player, stats|
+          if player == temp_name_formatted
+            puts stats
+            stats.each do |stat, value|
+              if stat == :shoe
+                #puts stat
+                #puts value
+                return value
+              end
+            end
+          end
+        end
+      end
+    end
+  
+end
 
-player_numbers("Brooklyn Nets")
 
