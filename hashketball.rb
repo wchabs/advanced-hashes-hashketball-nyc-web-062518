@@ -207,5 +207,9 @@ def player_numbers(team_name)
       end
     end
   end
+  team_jrsy_nums
 end
+
+
+player_numbers("Brooklyn Nets")
 
