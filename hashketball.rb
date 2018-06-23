@@ -171,6 +171,7 @@ def team_colors(team_name)
   
   all_data.each do |location, game_data|
     game_data.each do |data, details|
+      puts details.keys
       if details == team_name
         puts details
         puts data
