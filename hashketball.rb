@@ -175,17 +175,21 @@ def team_colors(team_name)
     if temp_array.include?(team_name)
       return game_data[:colors]
     end
-    #game_data.each do |data, details|
-      #puts details.class
-      #puts details
-      #puts data
-    #  if details == team_name
-        #puts details
-        #puts data
-    #    return details if data == :colors
-    #  end
-    #end
   end
 end
 
-team_colors("Brooklyn Nets")
+def team_names
+  all_data = game_hash
+  team_name_array = []
+  
+  all_data.each do |location, game_data|
+    game_data.each do |data, details|
+      if data == :team_name
+        team_name_array << details
+      end
+    end
+  end
+  team_name_array
+  
+end
+
