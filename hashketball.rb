@@ -203,7 +203,7 @@ def player_numbers(team_name)
         if data == :players
           # details
           details.each do |players, numbers|
-            team_jrsy_nums << numbers.values
+            team_jrsy_nums << numbers[:number]
             puts players
             puts numbers
             puts "loops"
