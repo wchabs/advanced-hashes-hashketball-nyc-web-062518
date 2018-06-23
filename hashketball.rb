@@ -168,19 +168,23 @@ end
 
 def team_colors(team_name)
   all_data = game_hash
+  temp_array = []
   
   all_data.each do |location, game_data|
-    puts game_data.values[1]
-    game_data.each do |data, details|
+    temp_array = game_data.values
+    if temp_array.include?(team_name)
+      game_data[:points]
+    end
+    #game_data.each do |data, details|
       #puts details.class
       #puts details
       #puts data
-      if details == team_name
+    #  if details == team_name
         #puts details
         #puts data
-        return details if data == :colors
-      end
-    end
+    #    return details if data == :colors
+    #  end
+    #end
   end
 end
 
