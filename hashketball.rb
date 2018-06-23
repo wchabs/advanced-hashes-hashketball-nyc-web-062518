@@ -243,21 +243,22 @@ def big_shoe_rebounds
   
   all_data.each do |location, game_data|
     game_data.each do |data, details|
-      puts details
-      details.each do |player, stats|
-        if temp_player_shoe == 0
-          temp_player_shoe = stats[:shoe]
-          temp_player_name = player
-          temp_player_rebounds = stats[:rebounds]
-        elsif temp_player_shoe < stats[:shoe]
-          temp_player_shoe = stats[:shoe]
-          temp_player_name = player
-          temp_player_rebounds = stats[:rebounds]
+      if data == :players
+        details.each do |player, stats|
+          if temp_player_shoe == 0
+            temp_player_shoe = stats[:shoe]
+            temp_player_name = player
+            temp_player_rebounds = stats[:rebounds]
+          elsif temp_player_shoe < stats[:shoe]
+            temp_player_shoe = stats[:shoe]
+            temp_player_name = player
+            temp_player_rebounds = stats[:rebounds]
+          end
         end
       end
     end
   end
-  temp_player_rebounds
+  puts temp_player_rebounds
 end
 
 big_shoe_rebounds
