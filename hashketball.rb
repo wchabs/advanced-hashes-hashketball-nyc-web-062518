@@ -243,6 +243,7 @@ def big_shoe_rebounds
   
   all_data.each do |location, game_data|
     game_data.each do |data, details|
+      puts details
       details.each do |player, stats|
         if temp_player_shoe == 0
           temp_player_shoe = stats[:shoe]
