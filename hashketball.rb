@@ -192,5 +192,20 @@ def team_names
   team_name_array
 end
 
-
+def player_numbers(team_name)
+  all_data = game_hash
+  team_jrsy_nums = []
+  
+  all_data.each do |location, game_data|
+    if game_data.values.include?(team_name)
+      game_data.each do |data, details|
+        if data == :players
+          details.each do |players, numbers|
+            team_jrsy_nums << numbers
+          end
+        end
+      end
+    end
+  end
+end
 
