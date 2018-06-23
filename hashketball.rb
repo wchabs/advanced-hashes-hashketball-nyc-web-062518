@@ -204,15 +204,15 @@ def player_numbers(team_name)
           # details
           details.each do |players, numbers|
             team_jrsy_nums << numbers[:number]
-            puts players
-            puts numbers
-            puts "loops"
+            #puts players
+            #puts numbers
+            #puts "loops"
           end
         end
       end
     end
   end
-  puts team_jrsy_nums
+  return team_jrsy_nums
 end
 
 
