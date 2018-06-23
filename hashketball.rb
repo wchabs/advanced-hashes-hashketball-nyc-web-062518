@@ -170,11 +170,11 @@ def team_colors(team_name)
   all_data = game_hash
   
   all_data.each do |location, game_data|
-    puts game_data
+    puts game_data.values
     game_data.each do |data, details|
-      puts details.class
-      puts details
-      puts data
+      #puts details.class
+      #puts details
+      #puts data
       if details == team_name
         #puts details
         #puts data
