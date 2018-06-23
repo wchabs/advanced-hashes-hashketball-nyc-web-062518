@@ -227,13 +227,6 @@ def player_stats(player_name)
         details.each do |player, stats|
           if player == temp_name_formatted
             return stats
-            #stats.each do |stat, value|
-            #  if stat == :shoe
-                #puts stat
-                #puts value
-            #    return value
-            #  end
-            #end
           end
         end
       end
@@ -241,5 +234,7 @@ def player_stats(player_name)
   end
 end
 
+def big_shoe_rebounds
+  
+end
 
-#player_stats("Jeff Adrien")
