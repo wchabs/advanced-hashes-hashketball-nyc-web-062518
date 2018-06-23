@@ -201,6 +201,7 @@ def player_numbers(team_name)
       game_data.each do |data, details|
         puts data
         if data == :players
+          puts details
           details.each do |players, numbers|
             team_jrsy_nums << numbers
           end
