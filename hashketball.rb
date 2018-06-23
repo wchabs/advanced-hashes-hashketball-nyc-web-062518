@@ -209,7 +209,7 @@ def player_numbers(team_name)
       end
     end
   end
-  team_jrsy_nums
+  puts team_jrsy_nums
 end
 
 
