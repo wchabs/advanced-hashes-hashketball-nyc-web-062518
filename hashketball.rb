@@ -226,13 +226,13 @@ def player_stats(player_name)
       if data == :players
         details.each do |player, stats|
           if player == temp_name_formatted
-            puts stats
-            stats.each do |stat, value|
-              if stat == :shoe
+            return stats
+            #stats.each do |stat, value|
+            #  if stat == :shoe
                 #puts stat
                 #puts value
-                return value
-              end
+            #    return value
+            #  end
             end
           end
         end
