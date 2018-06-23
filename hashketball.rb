@@ -173,7 +173,7 @@ def team_colors(team_name)
   all_data.each do |location, game_data|
     temp_array = game_data.values
     if temp_array.include?(team_name)
-      puts game_data[:points]
+      puts game_data[:colors]
     end
     #game_data.each do |data, details|
       #puts details.class
